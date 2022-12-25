@@ -1,0 +1,32 @@
+class Demo6
+ {
+     public static void main (String[] args)
+        {
+
+          try
+           {
+               int num1=Integer.parseInt(args[0]);
+               int num2=Integer.parseInt(args[1]);
+                int k=num1/num2;
+                System.out.println("k=" + k);
+           }
+         catch(ArrayIndexOutOfBoundsException e)
+           {
+             System.out.println(e);
+             System.out.println("Minimum 2 numbers should be sent from command line");
+           }
+         catch(NumberFormatException e)
+           {
+             System.out.println(e);
+             System.out.println("2 numbers should be sent from command line. Supplying string causes this problem");
+           }
+         catch(ArithmeticException e)
+           {
+             System.out.println(e);
+             System.out.println("The second number should not be zero");
+           }
+
+
+        }
+    }
+
